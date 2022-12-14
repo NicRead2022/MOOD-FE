@@ -19,7 +19,7 @@ const Home = () => {
   const moodRenderer = moods.map((mood,index) => { return (<MoodCard id={mood.id} key={mood.id} feeling = {mood.feelings}/>)})
 return(
   <div>
-    <h1>Aura Vibes</h1>
+    <h1>Select a mood to see playlists that were curated for those moments.</h1>
     {
       moodRenderer
     }

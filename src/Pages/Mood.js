@@ -22,7 +22,7 @@ const Playlist = () => {
   const playlistRenderer = playlists.map((playlist,index) => { return (<PlaylistCard  id={playlist.id} key={playlist.id} name = {playlist.name}/>)})
 return(
   <div>
-    <h1>Aura Vibes</h1>
+    <h1>Happy Vibes Playlist</h1>
     {
       playlistRenderer
     }

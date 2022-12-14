@@ -10,23 +10,23 @@ const Playlist = () => {
   console.log(playlistId)
   const [songs,setSongs] = useState([])
   const getSongs = async () => {
-  const res = await axios.get(`${BASE_URL}/songs/${playlistId}`)
+  const res = await axios.get(`${BASE_URL}/song/playlist/${playlistId}`)
   setSongs(res.data)
-  console.log(res.data)
+  console.log(res)
 }
 
   useEffect(() => {
     getSongs()
   }, [])
   
-  const songsRenderer = songs.map((songs,index) => { return (<SongCard playlistId={songs.playlistId} id={songs.id} key={songs.id} name = {songs.name}/>)})
+  
 
 
   return(
   <div>
-    <h1>Aura Vibes</h1>
+    <h1>Enjoy your songs!</h1>
     {
-      songsRenderer
+     songs.map((songs) => { return (<SongCard playlistId={songs.playlistId} id={songs.id} key={songs.id} name = {songs.name}/>)})
     }
     
   </div>

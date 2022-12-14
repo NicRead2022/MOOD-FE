@@ -10,6 +10,8 @@ const SongCard = ({songName, indexKey, id, playlistId}) => {
 const [song, setSong] = useState(songName)
 const [playId, setPlayId] = useState(playlistId)
 let Navigate = useNavigate()
+  
+
   const deleteSong = async () => {
     await axios.delete(`${BASE_URL}/song/${id}`)
   }
