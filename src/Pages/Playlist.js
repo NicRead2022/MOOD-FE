@@ -3,12 +3,14 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BASE_URL } from "../globals";
 import SongCard from "../components/SongCard";
-import { Navigate } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 
 const Playlist = () => {
+  const {playlistId} = useParams()
+  console.log(playlistId)
   const [songs,setSongs] = useState([])
   const getSongs = async () => {
-  const res = await axios.get(`${BASE_URL}/songs/`)
+  const res = await axios.get(`${BASE_URL}/songs/${playlistId}`)
   setSongs(res.data)
   console.log(res.data)
 }
@@ -17,7 +19,7 @@ const Playlist = () => {
     getSongs()
   }, [])
   
-  const songsRenderer = songs.map((songs,index) => { return (<SongCard id={songs.id} key={songs.id} name = {songs.name}/>)})
+  const songsRenderer = songs.map((songs,index) => { return (<SongCard playlistId={songs.playlistId} id={songs.id} key={songs.id} name = {songs.name}/>)})
 
 
   return(

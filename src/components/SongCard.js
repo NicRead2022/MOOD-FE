@@ -3,15 +3,19 @@ import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import React from 'react'
+import Playlist from '../Pages/Mood'
+import { TextField, Card } from '@mui/material'
 
-const SongCard = ({songName, indexKey, id}) => {
+const SongCard = ({songName, indexKey, id, playlistId}) => {
+const [song, setSong] = useState(songName)
+const [playId, setPlayId] = useState(playlistId)
 let Navigate = useNavigate()
   const deleteSong = async () => {
     await axios.delete(`${BASE_URL}/song/${id}`)
   }
   
   const updateSong = async () => {
-    await axios.put(`${BASE_URL}/song/${id}`)
+    await axios.put(`${BASE_URL}/song/${id}`, {songName: song, playlistId:1})
     Navigate('/playlist')
   }
 
@@ -27,24 +31,24 @@ let Navigate = useNavigate()
   backgroundColor = '#78290fff'
   }
   if (
-    songName === 'Misery Business'
+  songName === 'Misery Business'
   ) {
-    backgroundColor = '#78290fff'
+  backgroundColor = '#78290fff'
   }
   if (
-    songName === 'Mothers Daughter'
+  songName === 'Mothers Daughter'
   ) {
-    backgroundColor = '#78290fff'
+  backgroundColor = '#78290fff'
   }
   if (
-    songName === 'Church'
+  songName === 'Church'
   ) {
-    backgroundColor = '#78290fff'
+  backgroundColor = '#78290fff'
   }
   if (
-    songName === 'Strut'
+  songName === 'Strut'
   ) {
-    backgroundColor = '#78290fff'
+  backgroundColor = '#78290fff'
   }
 const songstyle = {
   backgroundColor: backgroundColor,
@@ -54,10 +58,19 @@ const songstyle = {
   borderRadius: '25px',
   margin: '8px'
 }
+const handleSongChange = (event) => {
+  setSong(event.target.value)
+}
+
+
+
+
+
 return(
-    <div key= {indexKey} style={
+    <Card key= {indexKey} style={
     songstyle
   }>
+    <TextField value={song} onChange={handleSongChange} label="Song Name"/>
     <div>
       <button onClick={() => updateSong()} 
       className="update-song-btn"></button>
@@ -65,7 +78,7 @@ return(
     <button onClick={() => deleteSong()}
       className="delete-song-btn">
     </button>
-  </div>
+  </Card>
   )
 }
 export default SongCard

@@ -3,6 +3,7 @@ import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
 // import '../CSS/Home.css'
+import {Card, CardHeader, CardContent, CardMedia} from '@mui/material'
 
 
 const MoodCard = ({feeling, indexKey, id }) => {
@@ -35,10 +36,19 @@ const moodstyle = {
 
 
   return(
-    <div key= {indexKey}style={
+    <Card key= {indexKey}style={
       moodstyle
     } onClick={navigateToMood}
-  ></div>
+  >
+    <CardHeader title={feeling}>
+      {feeling}
+    </CardHeader>
+    <CardContent>
+      <CardMedia>
+        image
+      </CardMedia>
+    </CardContent>
+  </Card>
   )
 }
 
