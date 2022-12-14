@@ -1,21 +1,26 @@
 import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 // import '../CSS/Home.css'
 
 
 const MoodCard = ({feeling, indexKey}) => {
- let backgroundColor = '#ff7d00ff'
+  
+  
+let navigate = useNavigate()
+
+let backgroundColor = '#ff7d00ff'
   if (
   feeling === 'Sad'
- ) {
+) {
   backgroundColor = '#15616dff'
- }
+}
   if (
   feeling === 'Rage'
- ) {
+) {
   backgroundColor = '#78290fff'
- }
+}
 const moodstyle = {
   backgroundColor: backgroundColor,
   height: '200px',
