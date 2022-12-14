@@ -5,11 +5,11 @@ import { useNavigate, Link } from 'react-router-dom'
 // import '../CSS/Home.css'
 
 
-const MoodCard = ({feeling, indexKey}) => {
-  
+const MoodCard = ({feeling, indexKey, id }) => {
+
   
 let navigate = useNavigate()
-
+const navigateToMood = () => {navigate(`/moods/${id}`)}
 let backgroundColor = '#ff7d00ff'
   if (
   feeling === 'Sad'
@@ -37,7 +37,7 @@ const moodstyle = {
   return(
     <div key= {indexKey}style={
       moodstyle
-    }
+    } onClick={navigateToMood}
   ></div>
   )
 }

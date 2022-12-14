@@ -5,15 +5,14 @@ import { useParams, useNavigate, Link } from 'react-router-dom'
 import React from 'react'
 
 const SongCard = ({songName, indexKey, id}) => {
-
+let Navigate = useNavigate()
   const deleteSong = async () => {
     await axios.delete(`${BASE_URL}/song/${id}`)
   }
   
   const updateSong = async () => {
     await axios.put(`${BASE_URL}/song/${id}`)
-    setSelectedSong(songUpdateDetails)
-    navigate('/playlist')
+    Navigate('/playlist')
   }
 
   let backgroundColor = '#ff7d00ff'
