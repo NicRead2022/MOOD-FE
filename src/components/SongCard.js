@@ -62,7 +62,7 @@ const SongCard = ({ songName, indexKey, id, playlistId, getSongs }) => {
       <TextField margin="normal" value={song} onChange={handleSongChange} label="Song Name"/>
       <div>
         <button onClick={updateSong} className="update-song-btn">
-          Update Song
+          UPDATE SONG
         </button>
       </div>
       <button onClick={() => deleteSong()} className="delete-song-btn">
