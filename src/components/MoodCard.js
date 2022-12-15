@@ -22,8 +22,8 @@ let img = "happy image"
   if (
   feeling === 'Rage'
 ) {
-   backgroundColor = '#78290fff'
-  img = 'https://imgur.com/b0iqPpK'
+  backgroundColor = '#78290fff'
+  img = 'https://i.imgur.com/b0iqPpK.png'
 }
 const moodstyle = {
   backgroundColor: backgroundColor,
