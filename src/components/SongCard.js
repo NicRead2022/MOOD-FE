@@ -23,7 +23,6 @@ const SongCard = ({ songName, indexKey, id, playlistId, getSongs }) => {
       playlistId: playlistId
     })
     getSongs()
-    // navigate('/playlist')
   }
 
   let backgroundColor = '#ff7d00ff'

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React from 'react';
-// import Client from '../services/api'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Button} from '@mui/material';
@@ -24,7 +23,6 @@ const [formState, setFormState] = useState(initialState)
       .then((res) => {
         console.log(res);
         setFormState(initialState)
-        // navigate(`/playlists/${playlistId}`)
       })
       .catch((error) => {
         console.log(error)

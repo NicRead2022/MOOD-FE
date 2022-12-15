@@ -11,7 +11,6 @@ const PlaylistCard = ({feeling, name, indexKey, id}) => {
   const [songs, setSongs] = useState([])
   const getSongsByPlaylist = async () => {
     const res = await axios.get(`${BASE_URL}/song/${id}`)
-    // setSongs(res.data[0].feelings)
     console.log(res.data)
   }
 

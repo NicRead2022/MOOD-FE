@@ -1,5 +1,4 @@
 import React from 'react';
-import Client from '../services/api'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -21,7 +20,6 @@ console.log(selectedSong)
       .then((res) => {
         console.log(res);
         setFormState(initialState)
-        // navigate(`/bandleader/${bandleader.id}`)
       })
       .catch((error) => {
         console.log(error)

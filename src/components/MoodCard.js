@@ -2,7 +2,6 @@ import axios from 'axios'
 import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
 import { useNavigate, Link } from 'react-router-dom'
-// import '../CSS/Home.css'
 import {Card, CardHeader, CardContent, CardMedia} from '@mui/material'
 
 
