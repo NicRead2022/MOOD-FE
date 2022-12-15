@@ -35,7 +35,7 @@ const [formState, setFormState] = useState(initialState)
           <h3>Add New Song:</h3>
     <form onSubmit={handleSubmit}>
     <div className='new-song-input-wrapper'>
-          <label htmlFor='songName'>Song:</label>
+          <label htmlFor='songName'>SONG:</label>
           <input
             onChange={handleChange}
             name="songName"
