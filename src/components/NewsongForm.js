@@ -3,9 +3,11 @@ import React from 'react';
 // import Client from '../services/api'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {Button} from '@mui/material';
+import { BASE_URL } from '../globals';
 
 
-const NewSong = ({playlist}) => {
+const NewSong = ({playlistId}) => {
 const navigate = useNavigate()
 const initialState = {songName: ""}
 const [formState, setFormState] = useState(initialState)
@@ -16,12 +18,13 @@ const [formState, setFormState] = useState(initialState)
 
   const handleSubmit = async (e) => {
     e.preventDefault();  
-    let newSongWithId = {...formState, playlistId: playlist.id }
-    await axios.post(`/api/song/all`, newSongWithId)
+    let newSongWithId = {...formState, playlistId: playlistId }
+    console.log(newSongWithId)
+    await axios.post(`${BASE_URL}/song/all`, newSongWithId)
       .then((res) => {
         console.log(res);
         setFormState(initialState)
-        // navigate(`/all/songs/${song.id}`)
+        // navigate(`/playlists/${playlistId}`)
       })
       .catch((error) => {
         console.log(error)

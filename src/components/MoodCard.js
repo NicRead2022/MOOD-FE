@@ -12,15 +12,18 @@ const MoodCard = ({feeling, indexKey, id }) => {
 let navigate = useNavigate()
 const navigateToMood = () => {navigate(`/moods/${id}`)}
 let backgroundColor = '#ff7d00ff'
+let img = "happy image"
   if (
   feeling === 'Sad'
 ) {
   backgroundColor = '#15616dff'
+  img = 'sad image'
 }
   if (
   feeling === 'Rage'
 ) {
   backgroundColor = '#78290fff'
+  img = ' rage image'
 }
 const moodstyle = {
   backgroundColor: backgroundColor,
@@ -43,11 +46,7 @@ const moodstyle = {
     <CardHeader title={feeling}>
       {feeling}
     </CardHeader>
-    <CardContent>
-      <CardMedia>
-        image
-      </CardMedia>
-    </CardContent>
+    <CardContent image={img}></CardContent>
   </Card>
   )
 }

@@ -17,7 +17,7 @@ console.log(selectedSong)
   const handleSubmit = async (e) => {
     e.preventDefault(); 
     let updateSong = {...formState, playlistId: playlist.Id} 
-    await Client.put(`/api/song/`, updateSong)
+    await axios.put(`/api/song/`, updateSong)
       .then((res) => {
         console.log(res);
         setFormState(initialState)

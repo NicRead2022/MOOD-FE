@@ -3,10 +3,22 @@ import { BASE_URL } from '../globals'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate, Link } from 'react-router-dom'
 import React from 'react'
-import { Card } from '@mui/material'
+import { Card, CardHeader, CardContent } from '@mui/material'
+import NewSong from './NewSongForm'
 
-const PlaylistCard = ({feeling, indexKey, id}) => {
+const PlaylistCard = ({feeling, name, indexKey, id}) => {
   let navigate = useNavigate()
+  const [songs, setSongs] = useState([])
+  const getSongsByPlaylist = async () => {
+    const res = await axios.get(`${BASE_URL}/song/${id}`)
+    // setSongs(res.data[0].feelings)
+    console.log(res.data)
+  }
+
+  useEffect(() => {
+    getSongsByPlaylist()
+  }, [])
+
   const navigateToPlaylists = () => {navigate(`/playlists/${id}`)}
 
   let backgroundColor = '#ff7d00ff'
@@ -33,7 +45,11 @@ return(
       playliststyle 
     }
     onClick={navigateToPlaylists}
-  ></Card>
+  >
+    <CardHeader title={name}></CardHeader>
+    <CardContent>
+    </CardContent>
+  </Card>
   )
 }
 export default PlaylistCard
