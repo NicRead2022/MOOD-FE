@@ -27,3 +27,7 @@
 
 [Github](https://github.com/) |
 [Trello](trello.com) |
+[W3Scools](https://www.w3schools.com)
+
+## Credit
+Ken Mendez | Kalan Luciano | Stephan Ramalho
