@@ -23,7 +23,7 @@ let img = "happy image"
   feeling === 'Rage'
 ) {
   backgroundColor = '#78290fff'
-  img = 'https://i.imgur.com/b0iqPpK.png'
+  img = '<a href="https://imgur.com/b0iqPpK"><img src="https://i.imgur.com/b0iqPpK.png" title="source: imgur.com" /></a>'
 }
 const moodstyle = {
   backgroundColor: backgroundColor,
