@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import {Button} from '@mui/material';
 import { BASE_URL } from '../globals';
-
+import '../CSS/Home.css'
 
 const NewSong = ({playlistId}) => {
 const navigate = useNavigate()
@@ -32,7 +32,7 @@ const [formState, setFormState] = useState(initialState)
   }
   return (
     <div>
-          <h3>ADD NEW SONG:</h3>
+          <h3 className='add-new-song'>ADD NEW SONG:</h3>
     <form onSubmit={handleSubmit}>
     <div className='new-song-input-wrapper'>
           <label htmlFor='songName'>SONG:</label>
