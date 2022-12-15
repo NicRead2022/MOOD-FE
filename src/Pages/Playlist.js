@@ -22,7 +22,7 @@ const Playlist = () => {
 
   return (
     <div>
-      <h1>Enjoy your songs!</h1>
+      <h2>Enjoy your songs!</h2>
       <NewSong playlistId={playlistId}>
 
       </NewSong>
