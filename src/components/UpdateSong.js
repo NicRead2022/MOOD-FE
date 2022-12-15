@@ -41,7 +41,7 @@ console.log(selectedSong)
             value={formState.songName} 
           />
         </div>
-  <button className='submit-btn' type="submit">Submit</button>
+  <button className='submit-btn' type="submit">SUBMIT</button>
     </form>
   </div>
   )}
