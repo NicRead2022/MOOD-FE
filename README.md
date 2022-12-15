@@ -19,6 +19,8 @@
 
 ## ERD
 <img src="https://user-images.githubusercontent.com/107156341/206355502-7842a543-3c4a-4387-8c33-2093fc1b8e65.png" width=50% height=50%>
+##
+<img src="https://user-images.githubusercontent.com/107156341/206355502-7842a543-3c4a-4387-8c33-2093fc1b8e65.png" width=50% height=50%>
 
 
 ## Technologies Used
