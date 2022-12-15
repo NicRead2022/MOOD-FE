@@ -32,7 +32,7 @@ const [formState, setFormState] = useState(initialState)
   }
   return (
     <div>
-          <h3>Add New Song:</h3>
+          <h3>ADD NEW SONG:</h3>
     <form onSubmit={handleSubmit}>
     <div className='new-song-input-wrapper'>
           <label htmlFor='songName'>SONG:</label>
@@ -43,7 +43,7 @@ const [formState, setFormState] = useState(initialState)
             value={formState.songName} required
           />
         </div>
-    <button type="submit">Submit</button>
+    <button type="submit">SUBMIT</button>
     </form>
   </div>
   )}
