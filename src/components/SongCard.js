@@ -66,7 +66,7 @@ const SongCard = ({ songName, indexKey, id, playlistId, getSongs }) => {
         </button>
       </div>
       <button onClick={() => deleteSong()} className="delete-song-btn">
-        Delete Song
+        DELETE SONG
       </button>
     </Card>
   )
