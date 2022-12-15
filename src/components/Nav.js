@@ -10,7 +10,7 @@ const Nav = ({}) => {
   return (
     <div>
       <h1 className="nav-title">Aura Vibes</h1>
-      <h2>Music is what feelings sound like.</h2>
+      <h2 className='nav2'>Music is what feelings sound like.</h2>
     </div>
   )
 }
