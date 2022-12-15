@@ -5,6 +5,7 @@ import { BASE_URL } from '../globals'
 import SongCard from '../components/SongCard'
 import NewSong from '../components/NewSongForm'
 import { Navigate, useParams } from 'react-router-dom'
+import '../CSS/Home.css'
 
 const Playlist = () => {
   const { playlistId } = useParams()
@@ -22,7 +23,7 @@ const Playlist = () => {
 
   return (
     <div>
-      <h2>Enjoy your songs!</h2>
+      <h2 className='enjoy-songs'>Enjoy your songs!</h2>
       <NewSong playlistId={playlistId}>
 
       </NewSong>
