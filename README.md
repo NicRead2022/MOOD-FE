@@ -6,7 +6,7 @@
 
 [Trello Board](https://trello.com/b/KOsMCqgJ/mood)
 
-## Description: An easy to use application that will suggest carefully cultivated playlists for any mood you might be in.
+## Description: An easy to use application that will suggest carefully curated playlists for a variety of moods.
 
 
 ## Component Hierarchy Diagram
@@ -20,8 +20,15 @@
 ## ERD
 <img src="https://user-images.githubusercontent.com/107156341/206355502-7842a543-3c4a-4387-8c33-2093fc1b8e65.png" width=50% height=50%>
 
+## App Home Screen
+<img src="https://user-images.githubusercontent.com/107156341/207792791-a3d10678-43dc-4b0f-aad6-fffff1d52825.png" width=50% height=50%>
+
 
 ## Technologies Used
 
 [Github](https://github.com/) |
 [Trello](trello.com) |
+[W3Schools](https://www.w3schools.com)
+
+## Credit
+Ken Mendez | Kalan Luciano | Stephan Ramalho
