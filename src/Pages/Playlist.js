@@ -24,9 +24,7 @@ const Playlist = () => {
   return (
     <div>
       <h2 className='enjoy-songs'>Enjoy your songs!</h2>
-      <NewSong playlistId={playlistId}>
-
-      </NewSong>
+      <NewSong playlistId={playlistId}/>
       {songs.map((songs) => {
         return (
           <SongCard
