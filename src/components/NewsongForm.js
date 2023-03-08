@@ -6,7 +6,7 @@ import {Button} from '@mui/material';
 import { BASE_URL } from '../globals';
 import '../CSS/Home.css'
 
-const NewSong = ({playlistId}) => {
+const NewSongForm = ({playlistId}) => {
 const navigate = useNavigate()
 const initialState = {songName: ""}
 const [formState, setFormState] = useState(initialState)
@@ -47,5 +47,5 @@ const [formState, setFormState] = useState(initialState)
   )}
 
 
-export default NewSong
+export default NewSongForm 
 
